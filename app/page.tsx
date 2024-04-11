@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import d from "./data.json";
 import Image from "next/image";
-import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants";
 interface Data {
   _id: string;
   username: string;
