@@ -14,13 +14,16 @@ export default function Home() {
   const fetchData = async () => {
     setLoading(true);
     const response = await fetch(
-      "https://daksh-soc-backend.vercel.app/leaderboard"
+      "https://daksh-soc-backend.vercel.app/leaderboard",
+      {
+        credentials: "include",
+      }
     );
     const data = await response.json();
     setData(data);
     setLoading(false);
   };
-  
+
   useEffect(() => {
     fetchData();
   }, []);
