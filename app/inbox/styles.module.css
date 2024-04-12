@@ -1,0 +1,57 @@
+.overall {
+    background: #f4f4f4 0% 0% no-repeat padding-box;
+}
+
+.messagesContainer {
+    overflow-x: hidden;
+    background: var(--bs-white);
+    cursor: pointer;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.messageWrapper {
+    all: unset;
+    display: grid;
+    grid-template-columns: 60px auto 10ch;
+    transition: transform 0.3s;
+    position: relative;
+    padding: 0.75rem;
+
+}
+
+.thumbnail {
+    align-self: center;
+    grid-row: 1/3;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--bs-info);
+    color: var(--bs-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-end: 0.75rem;
+
+}
+
+.name,
+.messageText {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.name {
+    align-self: center;
+    color: var(--bs-dark);
+}
+
+.agoTime {
+    justify-self: start;
+    color: var(--bs-secondary);
+}
+
+.messageText {
+    grid-column: 2/4;
+    color: var(--bs-secondary);
+}
