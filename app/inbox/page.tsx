@@ -34,7 +34,9 @@ const Inbox = () => {
     },
   ]);
   useEffect(() => {
-    const socket = io("https://daksh-soc-backend.vercel.app");
+    const socket = io("https://daksh-soc-backend.vercel.app", {
+      withCredentials : true
+    });
     socket.on(
       "message",
       (username: string, message: string, dateTime: string) => {
